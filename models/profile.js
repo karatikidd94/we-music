@@ -3,40 +3,25 @@ const Schema = mongoose.Schema;
 
 const profileSchema = new mongoose.Schema({
     name: {
-        firstName: String,
-        lastName: String,
+        type: String,
     },
     artist: {
-        name: String,
+        type: String,
+
     },
-    genres: {
-        slot1: {
-            type: String,
-            enum: []
-        },
-        slot2: {
-            type: String,
-            enum: []
-        },
-        slot3: {
-            type: String,
-            enum: []
-        },
-    },
-    img: {
-        type: '???',
+    genre: {
+        type: String,
     },
     spotifyLink: {
-        type: link,
+        type: String,
     },
-    user: {
-        type: Schema.Types.ObjectId, 
-        ref: 'User', 
-        required: true
-    },
-    userName: String,
-    userAvatar: String
-
+    // user: {
+    //     type: Schema.Types.ObjectId, 
+    //     ref: 'User', 
+    //     required: true
+    // },
+    // userName: String,
+    // userAvatar: String
 
   }, {
     timestamps: true
