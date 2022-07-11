@@ -1,0 +1,64 @@
+<%- include("../partials/header")  %> 
+<section class="vh-100" style="background-color: #eee;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-12 col-xl-4">
+  
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body text-center">
+              <div class="mt-3 mb-4">
+                <img src="<%= profile.img %>"
+                  class="rounded-circle img-fluid" style="width: 100px;" />
+              </div>
+              <h4 class="mb-2"><%= profile.name %></h4>
+              <p class="text-muted mb-4"><%= profile.artist %><span class="mx-2">|</span> <a
+                  href="<%= profile.spotifyLink %>">Spotify</a></p>
+              <div class="mb-4 pb-2">
+                <button type="button" class="btn btn-outline-primary btn-floating">
+                  <i class="fab fa-facebook-f fa-lg"></i>
+                </button>
+                <button type="button" class="btn btn-outline-primary btn-floating">
+                  <i class="fab fa-twitter fa-lg"></i>
+                </button>
+                <button type="button" class="btn btn-outline-primary btn-floating">
+                  <i class="fab fa-skype fa-lg"></i>
+                </button>
+              </div>
+              <button type="button" class="btn btn-primary btn-rounded btn-lg">
+                Connect Now
+              </button>
+              <div class="d-flex justify-content-between text-center mt-5 mb-2">
+                <!-- <div>
+                  <p class="mb-2 h5">8471</p>
+                  <p class="text-muted mb-0">Wallets Balance</p>
+                </div>
+                <div class="px-3">
+                  <p class="mb-2 h5">8512</p>
+                  <p class="text-muted mb-0">Income amounts</p>
+                </div>
+                <div>
+                  <p class="mb-2 h5">4751</p>
+                  <p class="text-muted mb-0">Total Transactions</p>
+                </div> -->
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- <div>
+    <div class="card" style="width: 80rem; height: 35rem; margin: auto; margin-top: 60px; background-color: rgb(220, 220, 220); display: flex; flex-direction: row; align-items: center;">
+        <img src="https://res.cloudinary.com/glide/image/fetch/f_auto,w_975,h_975,c_lfill/https%3A%2F%2Fstorage.googleapis.com%2Fglide-prod.appspot.com%2Fuploads-v2%2FFEr6MoVRCVxLM3jJHdZ9%2Fpub%2F7P128Fr6BzYk96wNwDLc.png" width="120" height="120"
+        style="display: block; background-color: transparent; border-radius: 50%; margin: auto; margin-left: 20px;">
+        <div class="card-body">
+            <h5 class="card-title">Maxwell Knowles</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Sterling</h6>
+        </div>
+        <div>
+            <h3 class="card-title">Details</h3>
+        </div>
+    </div>
+</div> -->
+<%- include("../partials/footer")  %> 

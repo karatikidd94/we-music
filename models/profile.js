@@ -15,6 +15,9 @@ const profileSchema = new mongoose.Schema({
     spotifyLink: {
         type: String,
     },
+    img: {
+        type: String,
+    }
     // user: {
     //     type: Schema.Types.ObjectId, 
     //     ref: 'User', 

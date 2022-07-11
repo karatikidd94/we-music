@@ -1,64 +1,35 @@
 <%- include("../partials/header")  %> 
-<section class="vh-100" style="background-color: #eee;">
-    <div class="container py-5 h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-md-12 col-xl-4">
-  
-          <div class="card" style="border-radius: 15px;">
-            <div class="card-body text-center">
-              <div class="mt-3 mb-4">
-                <img src="https://res.cloudinary.com/glide/image/fetch/f_auto,w_975,h_975,c_lfill/https%3A%2F%2Fstorage.googleapis.com%2Fglide-prod.appspot.com%2Fuploads-v2%2FFEr6MoVRCVxLM3jJHdZ9%2Fpub%2F7P128Fr6BzYk96wNwDLc.png"
-                  class="rounded-circle img-fluid" style="width: 100px;" />
-              </div>
-              <h4 class="mb-2"><%= user.name %></h4>
-              <p class="text-muted mb-4">@steller <span class="mx-2">|</span> <a
-                  href="https://open.spotify.com/artist/2p2YiVrDP0scQefeefDqCO?si=SqN6EMOsSC-GSSXFJPWkqw">Spotify</a></p>
-              <div class="mb-4 pb-2">
-                <button type="button" class="btn btn-outline-primary btn-floating">
-                  <i class="fab fa-facebook-f fa-lg"></i>
-                </button>
-                <button type="button" class="btn btn-outline-primary btn-floating">
-                  <i class="fab fa-twitter fa-lg"></i>
-                </button>
-                <button type="button" class="btn btn-outline-primary btn-floating">
-                  <i class="fab fa-skype fa-lg"></i>
-                </button>
-              </div>
-              <button type="button" class="btn btn-primary btn-rounded btn-lg">
-                Connect Now
-              </button>
-              <div class="d-flex justify-content-between text-center mt-5 mb-2">
-                <!-- <div>
-                  <p class="mb-2 h5">8471</p>
-                  <p class="text-muted mb-0">Wallets Balance</p>
-                </div>
-                <div class="px-3">
-                  <p class="mb-2 h5">8512</p>
-                  <p class="text-muted mb-0">Income amounts</p>
-                </div>
-                <div>
-                  <p class="mb-2 h5">4751</p>
-                  <p class="text-muted mb-0">Total Transactions</p>
-                </div> -->
-              </div>
-            </div>
-          </div>
-  
-        </div>
-      </div>
+<div class="card" style="background-color: #007E7E; border-radius:0rem; flex-direction: row; padding: 45px 100px 45px 100px;">
+    <img src="https://res.cloudinary.com/glide/image/fetch/f_auto,w_975,h_975,c_lfill/https%3A%2F%2Fstorage.googleapis.com%2Fglide-prod.appspot.com%2Fuploads-v2%2FFEr6MoVRCVxLM3jJHdZ9%2Fpub%2FA6buFAvfbMvWk6g87QOF.jpg" width="120" height="120"
+    style="display: block; background-color: transparent; border-radius: 50%; margin: auto; margin-left: 20px;">
+    <div class="card-body text-white" style="padding-left: 20px;">
+        <h8 class="card-subtitle mb-2 text-white fw-bold" style="font-size: 13px;">WEMUSIC</h8>
+        <h5 class="card-title fs-2 fw-bold" style="font-size: 2.125rem; padding-bottom: 20px;">Independent doesn't mean alone</h5>
+        <p class="card-text" style="width: 1000px;">Don't have thousands of followers or monthly listeners? Not getting recommended on streaming platforms? Partner up with other small artists you dig and promote each other's work.
+            Just imagine: 5 artists with 1000 followers gives each of them 4000 new people to reach! We just have to work together.</p>
     </div>
-  </section>
-<!-- <div>
-    <div class="card" style="width: 80rem; height: 35rem; margin: auto; margin-top: 60px; background-color: rgb(220, 220, 220); display: flex; flex-direction: row; align-items: center;">
-        <img src="https://res.cloudinary.com/glide/image/fetch/f_auto,w_975,h_975,c_lfill/https%3A%2F%2Fstorage.googleapis.com%2Fglide-prod.appspot.com%2Fuploads-v2%2FFEr6MoVRCVxLM3jJHdZ9%2Fpub%2F7P128Fr6BzYk96wNwDLc.png" width="120" height="120"
-        style="display: block; background-color: transparent; border-radius: 50%; margin: auto; margin-left: 20px;">
+</div>
+<div style="display: flex; justify-content: space-around; align-items: center; padding: 20px 0px 20px 0px;">
+    <h2>Artists</h2>
+    <form class="form-inline" style="display: flex; height: 36px;">
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+        </svg> -->
+        <input class="form-control mr-sm-2" type="search" placeholder="Search..." aria-label="Search" style="margin-right: 10px;">
+        <button class="btn my-2 my-sm-0 text-white" style="background-color: #007E7E;" type="submit">Search</button>
+    </form>
+</div>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0px, 1fr)); justify-items: center;">
+  <% profiles.forEach(function(p) { %>
+    <div class="card" style="width: 18rem;  margin-bottom: 100px;">
+        <img class="card-img-top" src="<%= p.img %>" alt="Card image cap">
         <div class="card-body">
-            <h5 class="card-title">Maxwell Knowles</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Sterling</h6>
-        </div>
-        <div>
-            <h3 class="card-title">Details</h3>
+            <h7 class="card-subtitle mb-2 fw-bold" style="font-size: 13px; color: #007E7E;"><%= p.name %></h7>
+            <h5 class="card-title"><%= p.artist %></h5>
+            <p class="card-text"><%= p.genre %></p>
+            <a href="/profile/<%= p._id %>" class="btn stretched-link" style="background-color: #007E7E; color: white; margin: center">profile</a>
         </div>
     </div>
-</div> -->
+    <% }); %>
+</div>
 <%- include("../partials/footer")  %> 
